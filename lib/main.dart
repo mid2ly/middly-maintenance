@@ -125,28 +125,34 @@ class SingleTrans extends StatelessWidget {
             builder: (_, __) => Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 181),
+                const SizedBox(height: 167),
                 const Text(
                   'Middly',
                   style: TextStyle(fontSize: 150),
                 ).animate().fadeIn().slideY(begin: 0.7, end: 0),
-                const Text(
-                  'Coming soon...',
-                  style: TextStyle(fontSize: 30),
+                Text(
+                  'A new world is coming soon.',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Theme.of(context).disabledColor,
+                  ),
                 )
                     .animate()
                     .then(delay: 1700.ms)
                     .fadeIn()
                     .slideY(begin: 0.7, end: 0)
                     .then(delay: 1000.ms)
-                    .shimmer(curve: Curves.linear),
+                    .shimmer(
+                      curve: Curves.linear,
+                      duration: 400.ms,
+                    ),
                 const SizedBox(height: 100),
                 IconButton(
                   icon: const Icon(Icons.refresh),
                   onPressed: handleRefresh,
                 )
                     .animate()
-                    .then(delay: 5000.ms)
+                    .then(delay: 6000.ms)
                     .fadeIn()
                     .rotate(begin: -0.75)
                     .slideY(begin: 0.7, end: 0),
