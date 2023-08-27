@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       key: _refreshKey,
-      title: 'Flutter Demo',
+      title: 'Middly',
       theme: ThemeData(
         textTheme: GoogleFonts.notoSansTextTheme(textTheme),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
